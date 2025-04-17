@@ -16,6 +16,4 @@ docker exec -it netdata bash
 cd /var/log/netdata
 cat error.log
 
-# ✅ Stop and remove containers after task
-docker stop netdata mynginx
-docker rm netdata mynginx
+
