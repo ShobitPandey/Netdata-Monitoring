@@ -1,0 +1,21 @@
+# ✅ Check Docker installation
+docker --version
+
+# ✅ Run Netdata container
+docker run -d --name=netdata \
+  -p 19999:19999 \
+  --cap-add SYS_PTRACE \
+  --security-opt apparmor=unconfined \
+  netdata/netdata
+
+# ✅ Run sample container to test monitoring
+docker run -d --name=mynginx nginx
+
+# ✅ View logs inside the container
+docker exec -it netdata bash
+cd /var/log/netdata
+cat error.log
+
+# ✅ Stop and remove containers after task
+docker stop netdata mynginx
+docker rm netdata mynginx
