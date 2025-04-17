@@ -1,4 +1,4 @@
-# Netdata Monitoring (Docker on macOS)
+# Netdata Monitoring (Docker)
 
 ## Objective
 Monitor system resources using Netdata.
